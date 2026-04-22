@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IHRC Maharashtra - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#303030",
+                        "inverse-on-surface": "#f1f1f1",
+                        "tertiary-fixed-dim": "#fdb69a",
+                        "on-tertiary-container": "#b5785f",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#311300",
+                        "on-primary-fixed": "#001c3a",
+                        "outline": "#74777f",
+                        "on-secondary-fixed-variant": "#723600",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-fixed": "#351002",
+                        "secondary-fixed-dim": "#ffb787",
+                        "secondary": "#964900",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "surface-dim": "#dadada",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#001f3f",
+                        "background": "#f9f9f9",
+                        "secondary-fixed": "#ffdcc7",
+                        "primary-fixed": "#d4e3ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#110200",
+                        "on-tertiary-fixed-variant": "#6b3a25",
+                        "inverse-primary": "#afc8f0",
+                        "tertiary-fixed": "#ffdbce",
+                        "primary-fixed-dim": "#afc8f0",
+                        "primary": "#000613",
+                        "outline-variant": "#c4c6cf",
+                        "on-surface-variant": "#43474e",
+                        "on-background": "#1b1b1b",
+                        "surface": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#391303",
+                        "surface-tint": "#476083",
+                        "on-primary-container": "#6f88ad",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#ff851b",
+                        "on-surface": "#1b1b1b",
+                        "on-secondary-container": "#612d00",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "64px",
+                        "unit": "8px",
+                        "stack-md": "32px",
+                        "stack-sm": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin": "32px"
+                    },
+                    "fontFamily": {
+                        "h3": ["Inter"],
+                        "h1": ["Inter"],
+                        "h2": ["Inter"],
+                        "display": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "caption": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h3": ["24px", { "lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600" }],
+                        "h1": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "h2": ["30px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+        .marquee-content {
+            display: inline-block;
+            /* Animation handled by CSS in a real app, here we simulate structure */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-slate-950 docked full-width top-0 sticky z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none transition-all duration-200">
+<div class="max-w-[1280px] mx-auto flex justify-between items-center px-8 h-20">
+<!-- Brand -->
+<a class="text-xl font-bold tracking-tighter text-[#001F3F] dark:text-white" href="index.html">IHRC Maharashtra</a>
+<!-- Navigation -->
+<nav class="hidden md:flex gap-8">
+<a class="font-['Inter'] text-sm font-semibold tracking-wide uppercase text-[#FF851B] border-b-2 border-[#FF851B] pb-1 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all duration-200 active:opacity-80 transition-opacity" href="workshops.html">Workshops</a>
+<a class="font-['Inter'] text-sm font-semibold tracking-wide uppercase text-[#001F3F] dark:text-slate-300 hover:text-[#FF851B] hover:bg-slate-50 dark:hover:bg-slate-900 transition-all duration-200 active:opacity-80 transition-opacity" href="impact.html">Impact</a>
+<a class="font-['Inter'] text-sm font-semibold tracking-wide uppercase text-[#001F3F] dark:text-slate-300 hover:text-[#FF851B] hover:bg-slate-50 dark:hover:bg-slate-900 transition-all duration-200 active:opacity-80 transition-opacity" href="about.html">About</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4 hidden md:flex">
+<button class="font-label-md text-primary-container border border-primary-container rounded px-4 py-2 hover:bg-surface-container transition-colors">File a Complaint</button>
+<a href="register.html" class="font-label-md bg-secondary-container text-on-primary rounded px-6 py-2 hover:opacity-90 transition-opacity inline-block">Enroll Now</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary-container p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative pt-stack-lg pb-stack-lg md:pt-32 md:pb-32 px-gutter max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+<!-- Content -->
+<div class="col-span-1 lg:col-span-6 flex flex-col gap-stack-sm">
+<div class="inline-flex items-center gap-2 bg-primary-container text-on-primary px-3 py-1.5 rounded w-max">
+<span class="font-caption font-bold tracking-wider uppercase">Professional Development</span>
+</div>
+<h1 class="font-display text-primary-fixed-variant leading-tight">
+                        Advancing Excellence.<br/>Impacting Lives.
+                    </h1>
+<p class="font-body-lg text-on-surface-variant max-w-xl">
+                        Delivering institutional-grade workshops and training programs designed to empower educators, leaders, and communities through rigorous curriculum and visionary leadership.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-stack-sm">
+<button class="bg-secondary-container text-on-primary font-label-md px-8 py-3 rounded shadow-sm hover:opacity-90 transition-opacity flex items-center gap-2">
+                            Explore Workshops
+                            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<button class="border border-outline text-on-surface font-label-md px-8 py-3 rounded hover:bg-surface-container transition-colors">
+                            View Our Impact
+                        </button>
+</div>
+</div>
+<!-- Hero Image Grid (Bento style) -->
+<div class="col-span-1 lg:col-span-6 grid grid-cols-2 gap-4 h-full min-h-[400px]">
+<div class="col-span-1 row-span-2 rounded-xl overflow-hidden relative shadow-[0_4px_16px_rgba(0,0,0,0.05)] border border-surface-variant">
+<img alt="Professional workshop in session with attentive audience in a modern auditorium, well-lit, shallow depth of field" class="w-full h-full object-cover" data-alt="Professional workshop in session with attentive audience in a modern auditorium, well-lit, shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXaP2bBz2I24ETvynFRmURIzq_b6oLFSFPjBeRtpyOfFpMlVm_Yx5HqUX5UEC0m_2eSsmCYfr_hlxhiBs6EaQAm5Pn2aRDFPCuZOLlTv3-JyrZPVw6njRY5g8fa2RDlBoVhbij5KSXJt-kYrxHH7PLPHApZaSz6fl3eefW590idNqAVT12LAhVdagHsJQmZm4_oXIV1qzt4RuEbUlLqnazmKY9HrDqL8heju4JnzoKOIkIPRKpYvfG8UCE2vV3MAh1f38H8VMLT8M"/>
+</div>
+<div class="col-span-1 row-span-1 rounded-xl overflow-hidden relative shadow-[0_4px_16px_rgba(0,0,0,0.05)] border border-surface-variant">
+<img alt="Diverse group of professionals collaborating around a table, bright natural light, candid interaction" class="w-full h-full object-cover" data-alt="Diverse group of professionals collaborating around a table, bright natural light, candid interaction" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxz01CkI-PBJXwcHlhka8DWr1ww2s0oCtV9pP147Nypb5tgBKSqq5n_3bss3LVUGumG8kcaV_ZlAwp0a5kMHoJ7RZDfRz53IURsOM4k1H0UJ43n7P3z07_eEL7IhmKEAQq2Io1ayT_z-GNHke4p6FwsLX4iyp0Eppn2O22HDFxhiOO-elkrUOYh1Aq51DEQ8mkg5qI_OauN2T7GNVeTTlS6ZlssAWBNVZY72cyvKOaTiHgzChvGWRACrJuGAe_Hg7GxzjczwHtJAI"/>
+</div>
+<div class="col-span-1 row-span-1 rounded-xl overflow-hidden bg-primary-container p-6 flex flex-col justify-between text-on-primary shadow-[0_4px_16px_rgba(0,0,0,0.05)]">
+<span class="material-symbols-outlined text-[32px] text-secondary-container">school</span>
+<div>
+<div class="font-h2 text-secondary-container mb-1">100+</div>
+<div class="font-caption opacity-80">Certified Instructors</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-surface-container-high to-transparent opacity-50 z-0 pointer-events-none"></div>
+</section>
+<!-- Institutional Impact Section -->
+<section class="bg-surface-container-lowest border-y border-surface-variant py-stack-lg">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-stack-md">
+<h2 class="font-h2 text-primary-fixed-variant mb-unit">Institutional Impact</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">Measuring our footprint across communities through dedicated programs and transparent resource allocation.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Stat 1 -->
+<div class="bg-white p-6 rounded-lg border border-surface-variant shadow-[0_4px_12px_rgba(0,0,0,0.03)] text-center flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">category</span>
+</div>
+<div class="font-h1 text-secondary-container mb-2">8</div>
+<div class="font-label-md text-on-surface-variant uppercase tracking-wider">Core Domains</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-white p-6 rounded-lg border border-surface-variant shadow-[0_4px_12px_rgba(0,0,0,0.03)] text-center flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<div class="font-h1 text-secondary-container mb-2">100%</div>
+<div class="font-label-md text-on-surface-variant uppercase tracking-wider">Welfare Allocation</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-white p-6 rounded-lg border border-surface-variant shadow-[0_4px_12px_rgba(0,0,0,0.03)] text-center flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">live_tv</span>
+</div>
+<div class="font-h1 text-secondary-container mb-2">50+</div>
+<div class="font-label-md text-on-surface-variant uppercase tracking-wider">Live Sessions</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-white p-6 rounded-lg border border-surface-variant shadow-[0_4px_12px_rgba(0,0,0,0.03)] text-center flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<div class="font-h1 text-secondary-container mb-2">10k+</div>
+<div class="font-label-md text-on-surface-variant uppercase tracking-wider">Lives Impacted</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partners & Accreditations Marquee -->
+<section class="py-stack-md bg-surface border-b border-surface-variant overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter mb-6 text-center">
+<h3 class="font-label-md text-outline uppercase tracking-widest">Partners &amp; Accreditations</h3>
+</div>
+<div class="marquee-container opacity-60 hover:opacity-100 transition-opacity">
+<!-- Simulating a continuous marquee effect -->
+<div class="marquee-content flex gap-12 px-8 items-center justify-center min-w-full">
+<div class="font-h3 text-on-surface-variant flex items-center gap-2 grayscale"><span class="material-symbols-outlined text-[28px]">account_balance</span> Gov Dept. of Ed</div>
+<div class="font-h3 text-on-surface-variant flex items-center gap-2 grayscale"><span class="material-symbols-outlined text-[28px]">public</span> Global HR Init.</div>
+<div class="font-h3 text-on-surface-variant flex items-center gap-2 grayscale"><span class="material-symbols-outlined text-[28px]">policy</span> National Standards</div>
+<div class="font-h3 text-on-surface-variant flex items-center gap-2 grayscale"><span class="material-symbols-outlined text-[28px]">verified</span> Quality Council</div>
+<div class="font-h3 text-on-surface-variant flex items-center gap-2 grayscale"><span class="material-symbols-outlined text-[28px]">gavel</span> Legal Aid Soc.</div>
+</div>
+</div>
+</section>
+<!-- Spacer for visual breathability -->
+<div class="h-stack-lg"></div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#001F3F] dark:bg-black w-full border-t border-slate-800 flat no shadows">
+<div class="max-w-[1280px] mx-auto py-16 px-8 grid grid-cols-1 md:grid-cols-4 gap-12 divide-y md:divide-y-0 divide-slate-800">
+<div class="md:col-span-1 pt-8 md:pt-0">
+<span class="text-lg font-bold text-white mb-4 block">IHRC Maharashtra</span>
+<p class="font-['Inter'] text-sm leading-relaxed text-slate-300">
+                    Advancing human rights education and institutional excellence across communities.
+                </p>
+</div>
+<div class="md:col-span-3 pt-8 md:pt-0 flex flex-wrap gap-x-12 gap-y-4 justify-start md:justify-end">
+<a class="font-['Inter'] text-sm leading-relaxed text-slate-300 hover:text-white hover:underline transition-all focus:ring-2 focus:ring-[#FF851B]" href="#">Legal</a>
+<a class="font-['Inter'] text-sm leading-relaxed text-slate-300 hover:text-white hover:underline transition-all focus:ring-2 focus:ring-[#FF851B]" href="#">Board Info</a>
+<a class="font-['Inter'] text-sm leading-relaxed text-slate-300 hover:text-white hover:underline transition-all focus:ring-2 focus:ring-[#FF851B]" href="#">Contact Details</a>
+<a class="font-['Inter'] text-sm leading-relaxed text-slate-300 hover:text-white hover:underline transition-all focus:ring-2 focus:ring-[#FF851B]" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-sm leading-relaxed text-slate-300 hover:text-white hover:underline transition-all focus:ring-2 focus:ring-[#FF851B]" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1 md:col-span-4 pt-8 border-t border-slate-800 mt-8 text-center md:text-left">
+<p class="font-['Inter'] text-sm leading-relaxed text-slate-400">© 2024 International Human Rights Council Maharashtra. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>
