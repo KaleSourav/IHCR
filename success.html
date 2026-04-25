@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>IHRC Maharashtra - Registration Completed</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#f9f9f9",
+                        "on-background": "#1b1b1b",
+                        primary: "#001f3f",
+                        secondary: "#FF851B",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c4c6cf"
+                    },
+                    fontFamily: {
+                        inter: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col justify-center items-center">
+    
+    <div class="max-w-md w-full bg-surface-container-lowest border border-outline-variant p-10 rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] text-center m-4">
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="material-symbols-outlined text-[40px] text-green-600">check_circle</span>
+        </div>
+        
+        <h1 class="text-3xl font-bold text-primary mb-4">Registration Completed!</h1>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+            Thank you for registering. Your payment was successful and your seat is reserved.
+        </p>
+        <div class="bg-blue-50 border border-blue-100 p-4 rounded-lg text-sm text-blue-800 mb-8 flex items-start gap-3 text-left">
+            <span class="material-symbols-outlined text-blue-500 mt-0.5 text-[20px]">mark_email_read</span>
+            <p>Your ticket has been sent to your email address. We have also securely stored your registration details.</p>
+        </div>
+
+        <p class="text-sm text-gray-500 mb-4">
+            Redirecting you to the workshop page in <span id="countdown" class="font-bold">5</span> seconds...
+        </p>
+
+        <a href="workshops.html" class="inline-block w-full bg-[#001F3F] text-white py-3 rounded-lg font-semibold uppercase tracking-wide hover:bg-opacity-90 transition-opacity">
+            Go to Workshops Now
+        </a>
+    </div>
+
+    <script>
+        // Redirect logic
+        let count = 5;
+        const countdownEl = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            count--;
+            countdownEl.textContent = count;
+            if (count <= 0) {
+                clearInterval(interval);
+                window.location.href = "workshops.html";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

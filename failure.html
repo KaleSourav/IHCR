@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>IHRC Maharashtra - Registration Unsuccessful</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#f9f9f9",
+                        "on-background": "#1b1b1b",
+                        primary: "#001f3f",
+                        secondary: "#FF851B",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c4c6cf"
+                    },
+                    fontFamily: {
+                        inter: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col justify-center items-center">
+    
+    <div class="max-w-md w-full bg-surface-container-lowest border border-outline-variant p-10 rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] text-center m-4">
+        <div class="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="material-symbols-outlined text-[40px] text-red-500">error</span>
+        </div>
+        
+        <h1 class="text-3xl font-bold text-primary mb-4">Registration Unsuccessful</h1>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+            We're sorry, but your registration could not be completed. The payment process was interrupted or failed.
+        </p>
+        
+        <div class="bg-gray-50 border border-gray-200 p-4 rounded-lg text-sm text-gray-700 mb-8 flex items-start gap-3 text-left">
+            <span class="material-symbols-outlined text-gray-400 mt-0.5 text-[20px]">info</span>
+            <p>No charges were finalized. Please try registering again. If you continue to face issues, contact our support team.</p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <a href="register.html" class="inline-block w-full bg-[#FF851B] text-white py-3 rounded-lg font-semibold uppercase tracking-wide hover:bg-opacity-90 transition-opacity">
+                Try Again
+            </a>
+            <a href="workshops.html" class="inline-block w-full bg-white border border-[#001F3F] text-[#001F3F] py-3 rounded-lg font-semibold uppercase tracking-wide hover:bg-gray-50 transition-colors">
+                Return to Workshops
+            </a>
+        </div>
+    </div>
+</body>
+</html>

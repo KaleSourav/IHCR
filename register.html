@@ -308,8 +308,7 @@ Her teaching approach is simple and beginner friendly, making it easy for partic
 </footer>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
-    // Placeholder constants - you will update these later
-    const SUPABASE_PROJECT_URL = "https://YOUR_PROJECT_ID.supabase.co"; // e.g., https://xyz.supabase.co
+    const SUPABASE_PROJECT_URL = "https://ehnxtthhtjyijerayfqn.supabase.co";
     const CREATE_ORDER_URL = `${SUPABASE_PROJECT_URL}/functions/v1/create-order`;
 
     const form = document.getElementById('registrationForm');
@@ -362,9 +361,7 @@ Her teaching approach is simple and beginner friendly, making it easy for partic
                 order_id: data.order_id,
                 handler: function (response) {
                     // Payment was successful. Webhook will verify. 
-                    // Redirect to success/home page.
-                    alert("Payment successful! You will receive an email confirmation shortly.");
-                    window.location.href = "index.html"; 
+                    window.location.href = "success.html"; 
                 },
                 prefill: {
                     name: formData.name,
@@ -379,7 +376,7 @@ Her teaching approach is simple and beginner friendly, making it easy for partic
             const rzp1 = new window.Razorpay(options);
             
             rzp1.on('payment.failed', function (response){
-                alert("Payment failed! Reason: " + response.error.description);
+                window.location.href = "failure.html";
             });
 
             rzp1.open();

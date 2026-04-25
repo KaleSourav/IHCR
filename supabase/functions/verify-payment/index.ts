@@ -1,7 +1,19 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.14.0'
-// Note: To use crypto in Deno for HMAC
-import { hmac } from "https://deno.land/x/hmac@v2.0.1/mod.ts"
+
+// Helper: HMAC-SHA256 using built-in Web Crypto (no external imports needed)
+async function hmacSHA256Hex(secret: string, data: string): Promise<string> {
+  const encoder = new TextEncoder()
+  const key = await crypto.subtle.importKey(
+    "raw", encoder.encode(secret),
+    { name: "HMAC", hash: "SHA-256" },
+    false, ["sign"]
+  )
+  const signature = await crypto.subtle.sign("HMAC", key, encoder.encode(data))
+  return Array.from(new Uint8Array(signature))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('')
+}
 
 serve(async (req) => {
   try {
@@ -14,8 +26,8 @@ serve(async (req) => {
       throw new Error("Missing secret or signature")
     }
 
-    // Verify HMAC
-    const expectedSignature = hmac("sha256", secret, bodyText, "utf8", "hex")
+    // Verify HMAC using built-in crypto
+    const expectedSignature = await hmacSHA256Hex(secret, bodyText)
     
     if (expectedSignature !== rzpSignature) {
       throw new Error("Invalid signature")
@@ -29,8 +41,8 @@ serve(async (req) => {
     const { name, email, phone, gender, occupation } = order.notes
 
     // 1. Save to Supabase DB
-    const supabaseUrl = Deno.env.get('SUPABASE_URL') || ''
-    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
+    const supabaseUrl = "https://ehnxtthhtjyijerayfqn.supabase.co"
+    const supabaseKey = Deno.env.get('SERVICE_ROLE_KEY') || ''
     const supabase = createClient(supabaseUrl, supabaseKey)
 
     const { data: dbData, error: dbError } = await supabase
@@ -53,17 +65,63 @@ serve(async (req) => {
 
     if (dbError) throw dbError
 
-    // 2. Append to Google Sheets (Placeholder)
-    // Here you would make a fetch request to the Google Sheets API 
-    // or use a pre-configured Google App Script Web App URL.
-    console.log("Preparing to send data to Google Sheets...")
+    // 2. Append to Google Sheets
+    const googleAppScriptUrl = Deno.env.get('GOOGLE_APPS_SCRIPT_URL')
+    if (googleAppScriptUrl) {
+      console.log("Preparing to send data to Google Sheets...")
+      try {
+        await fetch(googleAppScriptUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            gender,
+            occupation,
+            order_id: order.id,
+            payment_status: payment.status
+          })
+        })
+      } catch (err) {
+        console.error("Google Sheets Webhook Error:", err.message)
+      }
+    }
 
-    // 3. Send Email via Resend (Placeholder)
-    // You would use fetch to call the Resend API.
+    // 3. Send Email via Resend
     const resendApiKey = Deno.env.get('RESEND_API_KEY')
     if (resendApiKey) {
       console.log(`Preparing to send email to ${email} via Resend...`)
-      // await fetch("https://api.resend.com/emails", { ... })
+      try {
+        await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${resendApiKey}`
+          },
+          body: JSON.stringify({
+            from: "IHRC Workshops <onboarding@resend.dev>", // Change to your verified domain once ready
+            to: [email],
+            subject: "Workshop Registration Confirmed - IHRC Maharashtra",
+            html: `
+              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eaeaec; border-radius: 8px;">
+                <h2 style="color: #001F3F;">Registration Confirmed!</h2>
+                <p>Dear <strong>${name}</strong>,</p>
+                <p>Thank you for registering for the <strong>AI & ChatGPT Workshop</strong>.</p>
+                <p>Your payment was successful and your seat is confirmed.</p>
+                <div style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; margin: 20px 0;">
+                  <p style="margin: 5px 0;"><strong>Order ID:</strong> ${order.id}</p>
+                  <p style="margin: 5px 0;"><strong>Payment ID:</strong> ${payment.id}</p>
+                </div>
+                <p>We look forward to seeing you!</p>
+                <p>Regards,<br>IHRC Maharashtra Board</p>
+              </div>
+            `
+          })
+        })
+      } catch (err) {
+        console.error("Resend Email Error:", err.message)
+      }
     }
 
     return new Response(JSON.stringify({ status: "ok" }), {
