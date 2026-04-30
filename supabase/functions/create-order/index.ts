@@ -29,7 +29,7 @@ serve(async (req) => {
     }
 
     // Call Razorpay API to create an order
-    const amount = 9900; // ₹99 in paise
+    const amount = 100; // ₹1 in paise (TESTING MODE - change back to 9900 for production)
     const currency = "INR";
 
     const basicAuth = btoa(`${key_id}:${key_secret}`)
