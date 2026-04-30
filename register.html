@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Smart Study Techniques - Workshop Registration</title>
-<!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Theme Configuration -->
-<script id="tailwind-config">
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Smart Study Techniques - Workshop Registration</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Theme Configuration -->
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -106,298 +112,375 @@
             }
         }
     </script>
-<style>
-        body { font-family: 'Inter', sans-serif; }
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
     </style>
 </head>
+
 <body class="bg-background text-on-background min-h-screen flex flex-col">
-<!-- TopNavBar -->
-<nav class="bg-white dark:bg-slate-950 text-[#001F3F] dark:text-slate-100 font-['Inter'] text-sm font-semibold tracking-wide uppercase docked full-width top-0 sticky z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none">
-<div class="max-w-[1280px] mx-auto flex justify-between items-center px-8 h-20">
-<div class="flex items-center gap-8">
-<a class="flex items-center gap-2 text-xl font-bold tracking-tighter text-[#001F3F] dark:text-white" href="index.html">
-<img src="logo.png" alt="IHRC Logo" class="h-10 w-auto" />
-IHRC Maharashtra (Education Department)
-</a>
-<div class="hidden md:flex gap-6 items-center h-full">
-<a class="text-[#FF851B] border-b-2 border-[#FF851B] pb-1 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all duration-200 active:opacity-80 transition-opacity flex items-center h-full pt-1" href="workshops.html">Workshops</a>
+    <!-- TopNavBar -->
+    <nav
+        class="bg-white dark:bg-slate-950 text-[#001F3F] dark:text-slate-100 font-['Inter'] text-sm font-semibold tracking-wide uppercase docked full-width top-0 sticky z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none">
+        <div class="max-w-[1280px] mx-auto flex justify-between items-center px-8 h-20">
+            <div class="flex items-center gap-8">
+                <a class="flex items-center gap-2 text-xl font-bold tracking-tighter text-[#001F3F] dark:text-white"
+                    href="index.html">
+                    <img src="logo.png" alt="IHRC Logo" class="h-10 w-auto" />
+                    IHRC Maharashtra (Education Department)
+                </a>
+                <div class="hidden md:flex gap-6 items-center h-full">
+                    <a class="text-[#FF851B] border-b-2 border-[#FF851B] pb-1 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all duration-200 active:opacity-80 transition-opacity flex items-center h-full pt-1"
+                        href="workshops.html">Workshops</a>
 
-<a class="text-[#001F3F] dark:text-slate-300 hover:text-[#FF851B] hover:bg-slate-50 dark:hover:bg-slate-900 transition-all duration-200 active:opacity-80 transition-opacity flex items-center h-full" href="about.html">About</a>
-</div>
-</div>
-<div class="hidden md:flex items-center gap-4">
-<button class="text-[#001F3F] dark:text-slate-300 hover:text-[#FF851B] font-['Inter'] text-sm font-semibold tracking-wide uppercase px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all duration-200 active:opacity-80 transition-opacity">Contact Us</button>
-<a href="register.html" class="bg-[#FF851B] text-white font-['Inter'] text-sm font-semibold tracking-wide uppercase px-6 py-2 rounded shadow-sm hover:opacity-90 active:opacity-80 transition-all duration-200 inline-block">Enroll Now</a>
-<img src="dip_logo.jpeg" alt="DIP Logo" class="h-10 w-auto" />
-</div>
-</div>
-</nav>
-<!-- Main Content -->
-<main class="flex-grow w-full max-w-[1280px] mx-auto px-gutter py-stack-lg">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-<!-- Left Column: Details -->
-<div class="lg:col-span-7 flex flex-col gap-stack-md">
-<!-- Header Section -->
-<div>
-<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-sm mb-4">
-<span class="material-symbols-outlined text-[16px] text-primary-container">school</span>
-<span class="font-label-md text-label-md text-primary-container uppercase tracking-wider">Upcoming Workshop</span>
-</div>
-<h1 class="font-display text-display text-on-surface mb-6">AI &amp; ChatGPT</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
-This workshop is designed to help you understand how AI and ChatGPT can be used in real life. From writing and research to productivity and problem solving, you will learn how to use these tools effectively.
-<br><br>
-The session focuses on practical use cases so that you can apply what you learn immediately in your studies, work, or personal projects.
-</p>
-<div class="flex flex-wrap items-center gap-6">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary-container">
-<span class="material-symbols-outlined">schedule</span>
-</div>
-<div>
-<div class="font-label-md text-label-md text-on-surface">Duration</div>
-<div class="font-body-md text-body-md text-on-surface-variant">2 hours</div>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary-container">
-<span class="material-symbols-outlined">payments</span>
-</div>
-<div>
-<div class="font-label-md text-label-md text-on-surface">Registration Fee</div>
-<div class="font-body-md text-body-md text-on-surface-variant">
-                    <span class="line-through text-outline text-sm">₹999</span>
-                    <span class="font-bold text-secondary-container ml-1">₹99</span>
+                    <a class="text-[#001F3F] dark:text-slate-300 hover:text-[#FF851B] hover:bg-slate-50 dark:hover:bg-slate-900 transition-all duration-200 active:opacity-80 transition-opacity flex items-center h-full"
+                        href="about.html">About</a>
                 </div>
-</div>
-</div>
-</div>
-</div>
-<hr class="border-t border-outline-variant my-2"/>
-<!-- Curriculum Highlights -->
-<div>
-<h2 class="font-h3 text-h3 text-on-surface mb-6">Curriculum Highlights</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow">
-<div class="w-8 h-8 rounded bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
-</div>
-<h3 class="font-h3 text-h3 text-on-surface !text-[20px] mb-2">Introduction to AI &amp; ChatGPT</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-Understand how AI works in simple terms and how ChatGPT can be used in daily tasks, studies, and professional work.
-</p>
-</div>
-<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow">
-<div class="w-8 h-8 rounded bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">edit_note</span>
-</div>
-<h3 class="font-h3 text-h3 text-on-surface !text-[20px] mb-2">Prompt Writing Techniques</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-Learn how to ask the right questions and give clear instructions to get accurate and useful responses from ChatGPT.
-</p>
-</div>
-<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow">
-<div class="w-8 h-8 rounded bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">work</span>
-</div>
-<h3 class="font-h3 text-h3 text-on-surface !text-[20px] mb-2">Practical Use Cases</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-Explore how to use AI for assignments, content creation, research, and improving productivity in real life situations.
-</p>
-</div>
-<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow">
-<div class="w-8 h-8 rounded bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">speed</span>
-</div>
-<h3 class="font-h3 text-h3 text-on-surface !text-[20px] mb-2">AI Tools &amp; Productivity</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-Discover different AI tools and learn how to use them to save time, automate tasks, and work more efficiently.
-</p>
-</div>
-</div>
-</div>
-<!-- Instructor Bio -->
-<div class="mt-4">
-<h2 class="font-h3 text-h3 text-on-surface mb-6">Lead Instructor</h2>
-<div class="flex flex-col sm:flex-row gap-6 p-6 bg-surface-container-low rounded-xl border border-outline-variant">
-<div class="w-24 h-24 rounded-full bg-primary-fixed text-primary-container flex items-center justify-center flex-shrink-0 text-3xl font-bold shadow-sm border-2 border-surface-container-lowest">
-RS
-</div>
-<div>
-<h3 class="font-h3 text-h3 text-on-surface mb-1">Mrs. Rakhi Sharma</h3>
-<p class="font-label-md text-label-md text-primary-container mb-3">AI Trainer and Workshop Facilitator</p>
-<p class="font-body-md text-body-md text-on-surface-variant mb-2">
-Mrs. Rakhi Sharma is an experienced trainer in the field of AI and digital tools. She has conducted multiple sessions focused on practical learning and real world application.
-</p>
-<p class="font-body-md text-body-md text-on-surface-variant">
-Her teaching approach is simple and beginner friendly, making it easy for participants to understand and use AI tools effectively.
-</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Right Column: Registration Form -->
-<div class="lg:col-span-5 relative">
-<div class="sticky top-[100px] bg-surface-container-lowest border border-outline-variant rounded-xl shadow-[0_4px_16px_rgba(0,0,0,0.06)] p-8">
-<div class="text-center mb-8">
-<h2 class="font-h2 text-h2 text-on-surface mb-2">Secure Registration</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Reserve your seat for Nov 15th</p>
-</div>
-<form id="registrationForm" class="flex flex-col gap-5">
-<div>
-<label class="font-label-md text-label-md text-on-surface block mb-2" for="fullName">Name</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all placeholder:text-outline" id="fullName" name="fullName" placeholder="Jane Doe" type="text" required/>
-</div>
-<div>
-<label class="font-label-md text-label-md text-on-surface block mb-2" for="email">Email</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all placeholder:text-outline" id="email" name="email" placeholder="jane.doe@example.com" type="email" required/>
-</div>
-<div>
-<label class="font-label-md text-label-md text-on-surface block mb-2" for="phone">Phone Number</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all placeholder:text-outline" id="phone" name="phone" placeholder="+91 00000 00000" type="tel" required/>
-</div>
-<div>
-<label class="font-label-md text-label-md text-on-surface block mb-2" for="gender">Gender</label>
-<select class="w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all text-on-surface" id="gender" name="gender" required>
-    <option value="" disabled selected>Select your gender</option>
-    <option value="Male">Male</option>
-    <option value="Female">Female</option>
-    <option value="Other">Other</option>
-    <option value="Prefer not to say">Prefer not to say</option>
-</select>
-</div>
-<div>
-<label class="font-label-md text-label-md text-on-surface block mb-2" for="occupation">Occupation</label>
-<input class="w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all placeholder:text-outline" id="occupation" name="occupation" placeholder="e.g. Student, Engineer, Teacher" type="text" required/>
-</div>
-<button id="submitBtn" class="w-full mt-4 bg-secondary-container text-on-primary font-label-md text-label-md uppercase tracking-wide py-4 rounded-lg hover:bg-secondary transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-secondary-container flex justify-center items-center gap-2" type="submit">
-    <span id="btnText">Pay Now ₹99</span>
-    <span id="btnSpinner" class="hidden material-symbols-outlined animate-spin text-[18px]">progress_activity</span>
-</button>
-</form>
-<!-- Trust Markers -->
-<div class="mt-6 pt-6 border-t border-outline-variant flex justify-center gap-6">
-<div class="flex items-center gap-2 text-on-surface-variant">
-<span class="material-symbols-outlined text-[18px]">lock</span>
-<span class="font-caption text-caption">SSL Secure</span>
-</div>
-<div class="flex items-center gap-2 text-on-surface-variant">
-<span class="material-symbols-outlined text-[18px]">verified</span>
-<span class="font-caption text-caption">Verified Institution</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<!-- Footer -->
-<footer class="bg-[#001F3F] dark:bg-black text-white font-['Inter'] text-sm leading-relaxed w-full border-t border-slate-800">
-<div class="max-w-[1280px] mx-auto py-16 px-8">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
-        <div class="md:col-span-1">
-            <span class="text-lg font-bold text-white mb-4 block">IHRC Maharashtra (Education Department)</span>
-            <p class="text-slate-300 mt-2">© 2024 International Human Rights Council Maharashtra. All Rights Reserved.</p>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <button
+                    class="text-[#001F3F] dark:text-slate-300 hover:text-[#FF851B] font-['Inter'] text-sm font-semibold tracking-wide uppercase px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all duration-200 active:opacity-80 transition-opacity">Contact
+                    Us</button>
+                <a href="register.html"
+                    class="bg-[#FF851B] text-white font-['Inter'] text-sm font-semibold tracking-wide uppercase px-6 py-2 rounded shadow-sm hover:opacity-90 active:opacity-80 transition-all duration-200 inline-block">Enroll
+                    Now</a>
+                <img src="dip_logo.jpeg" alt="DIP Logo" class="h-10 w-auto" />
+            </div>
         </div>
-        <div>
-            <h4 class="font-bold text-white text-xs tracking-widest uppercase mb-3">🇺🇸 US Headquarters</h4>
-            <p class="text-slate-300 leading-relaxed">1126 Pitner Avenue, Evanston,<br>IL 60202, United States<br><a href="tel:+12242550036" class="hover:text-[#FF851B] transition-colors">+1 224 255 0036</a><br><a href="mailto:info@ihrc.in" class="hover:text-[#FF851B] transition-colors">info@ihrc.in</a></p>
+    </nav>
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-[1280px] mx-auto px-gutter py-stack-lg">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Left Column: Details -->
+            <div class="lg:col-span-7 flex flex-col gap-stack-md">
+                <!-- Header Section -->
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-sm mb-4">
+                        <span class="material-symbols-outlined text-[16px] text-primary-container">school</span>
+                        <span
+                            class="font-label-md text-label-md text-primary-container uppercase tracking-wider">Upcoming
+                            Workshop</span>
+                    </div>
+                    <h1 class="font-display text-display text-on-surface mb-6">AI &amp; ChatGPT</h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
+                        This workshop is designed to help you understand how AI and ChatGPT can be used in real life.
+                        From writing and research to productivity and problem solving, you will learn how to use these
+                        tools effectively.
+                        <br><br>
+                        The session focuses on practical use cases so that you can apply what you learn immediately in
+                        your studies, work, or personal projects.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-6">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary-container">
+                                <span class="material-symbols-outlined">schedule</span>
+                            </div>
+                            <div>
+                                <div class="font-label-md text-label-md text-on-surface">Duration</div>
+                                <div class="font-body-md text-body-md text-on-surface-variant">2 hours</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary-container">
+                                <span class="material-symbols-outlined">payments</span>
+                            </div>
+                            <div>
+                                <div class="font-label-md text-label-md text-on-surface">Registration Fee</div>
+                                <div class="font-body-md text-body-md text-on-surface-variant">
+                                    <span class="line-through text-outline text-sm">₹999</span>
+                                    <span class="font-bold text-secondary-container ml-1">₹99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-t border-outline-variant my-2" />
+                <!-- Curriculum Highlights -->
+                <div>
+                    <h2 class="font-h3 text-h3 text-on-surface mb-6">Curriculum Highlights</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div
+                            class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow">
+                            <div
+                                class="w-8 h-8 rounded bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+                            </div>
+                            <h3 class="font-h3 text-h3 text-on-surface !text-[20px] mb-2">Introduction to AI &amp;
+                                ChatGPT</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                Understand how AI works in simple terms and how ChatGPT can be used in daily tasks,
+                                studies, and professional work.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow">
+                            <div
+                                class="w-8 h-8 rounded bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1;">edit_note</span>
+                            </div>
+                            <h3 class="font-h3 text-h3 text-on-surface !text-[20px] mb-2">Prompt Writing Techniques</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                Learn how to ask the right questions and give clear instructions to get accurate and
+                                useful responses from ChatGPT.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow">
+                            <div
+                                class="w-8 h-8 rounded bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1;">work</span>
+                            </div>
+                            <h3 class="font-h3 text-h3 text-on-surface !text-[20px] mb-2">Practical Use Cases</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                Explore how to use AI for assignments, content creation, research, and improving
+                                productivity in real life situations.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-shadow">
+                            <div
+                                class="w-8 h-8 rounded bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1;">speed</span>
+                            </div>
+                            <h3 class="font-h3 text-h3 text-on-surface !text-[20px] mb-2">AI Tools &amp; Productivity
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                Discover different AI tools and learn how to use them to save time, automate tasks, and
+                                work more efficiently.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Instructor Bio -->
+                <div class="mt-4">
+                    <h2 class="font-h3 text-h3 text-on-surface mb-6">Lead Instructor</h2>
+                    <div
+                        class="flex flex-col sm:flex-row gap-6 p-6 bg-surface-container-low rounded-xl border border-outline-variant">
+                        <div
+                            class="w-24 h-24 rounded-full bg-primary-fixed text-primary-container flex items-center justify-center flex-shrink-0 text-3xl font-bold shadow-sm border-2 border-surface-container-lowest">
+                            RS
+                        </div>
+                        <div>
+                            <h3 class="font-h3 text-h3 text-on-surface mb-1">Ms. Rakhi Sharma</h3>
+                            <p class="font-label-md text-label-md text-primary-container mb-3">AI Trainer and Workshop
+                                Facilitator</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-2">
+                                Ms. Rakhi Sharma is an experienced trainer in the field of AI and digital tools. She
+                                has conducted multiple sessions focused on practical learning and real world
+                                application.
+                            </p>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                Her teaching approach is simple and beginner friendly, making it easy for participants
+                                to understand and use AI tools effectively.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Registration Form -->
+            <div class="lg:col-span-5 relative">
+                <div
+                    class="sticky top-[100px] bg-surface-container-lowest border border-outline-variant rounded-xl shadow-[0_4px_16px_rgba(0,0,0,0.06)] p-8">
+                    <div class="text-center mb-8">
+                        <h2 class="font-h2 text-h2 text-on-surface mb-2">Secure Registration</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Reserve your seat</p>
+                    </div>
+                    <form id="registrationForm" class="flex flex-col gap-5">
+                        <div>
+                            <label class="font-label-md text-label-md text-on-surface block mb-2"
+                                for="fullName">Name</label>
+                            <input
+                                class="w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all placeholder:text-outline"
+                                id="fullName" name="fullName" placeholder="Jane Doe" type="text" required />
+                        </div>
+                        <div>
+                            <label class="font-label-md text-label-md text-on-surface block mb-2"
+                                for="email">Email</label>
+                            <input
+                                class="w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all placeholder:text-outline"
+                                id="email" name="email" placeholder="jane.doe@example.com" type="email" required />
+                        </div>
+                        <div>
+                            <label class="font-label-md text-label-md text-on-surface block mb-2" for="phone">Phone
+                                Number</label>
+                            <input
+                                class="w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all placeholder:text-outline"
+                                id="phone" name="phone" placeholder="+91 00000 00000" type="tel" required />
+                        </div>
+                        <div>
+                            <label class="font-label-md text-label-md text-on-surface block mb-2"
+                                for="gender">Gender</label>
+                            <select
+                                class="w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all text-on-surface"
+                                id="gender" name="gender" required>
+                                <option value="" disabled selected>Select your gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                                <option value="Prefer not to say">Prefer not to say</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="font-label-md text-label-md text-on-surface block mb-2"
+                                for="occupation">Occupation</label>
+                            <input
+                                class="w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all placeholder:text-outline"
+                                id="occupation" name="occupation" placeholder="e.g. Student, Engineer, Teacher"
+                                type="text" required />
+                        </div>
+                        <button id="submitBtn"
+                            class="w-full mt-4 bg-secondary-container text-on-primary font-label-md text-label-md uppercase tracking-wide py-4 rounded-lg hover:bg-secondary transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-secondary-container flex justify-center items-center gap-2"
+                            type="submit">
+                            <span id="btnText">Pay Now ₹99</span>
+                            <span id="btnSpinner"
+                                class="hidden material-symbols-outlined animate-spin text-[18px]">progress_activity</span>
+                        </button>
+                    </form>
+                    <!-- Trust Markers -->
+                    <div class="mt-6 pt-6 border-t border-outline-variant flex justify-center gap-6">
+                        <div class="flex items-center gap-2 text-on-surface-variant">
+                            <span class="material-symbols-outlined text-[18px]">lock</span>
+                            <span class="font-caption text-caption">SSL Secure</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-on-surface-variant">
+                            <span class="material-symbols-outlined text-[18px]">verified</span>
+                            <span class="font-caption text-caption">Verified Institution</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <h4 class="font-bold text-white text-xs tracking-widest uppercase mb-3">🇨🇭 Switzerland Headquarters</h4>
-            <p class="text-slate-300 leading-relaxed">31 Rue Vollandes, 1207 Genèva,<br>Switzerland<br><a href="tel:+41779664839" class="hover:text-[#FF851B] transition-colors">+41 77 966 4839</a><br><a href="mailto:info@ihrc-geneve.org" class="hover:text-[#FF851B] transition-colors">info@ihrc-geneve.org</a></p>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-[#001F3F] dark:bg-black text-white font-['Inter'] text-sm leading-relaxed w-full border-t border-slate-800">
+        <div class="max-w-[1280px] mx-auto py-16 px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+                <div class="md:col-span-1">
+                    <span class="text-lg font-bold text-white mb-4 block">IHRC Maharashtra (Education Department)</span>
+                    <p class="text-slate-300 mt-2">© 2024 International Human Rights Council Maharashtra. All Rights
+                        Reserved.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-xs tracking-widest uppercase mb-3">🇺🇸 US Headquarters</h4>
+                    <p class="text-slate-300 leading-relaxed">1126 Pitner Avenue, Evanston,<br>IL 60202, United
+                        States<br><a href="tel:+12242550036" class="hover:text-[#FF851B] transition-colors">+1 224 255
+                            0036</a><br><a href="mailto:info@ihrc.in"
+                            class="hover:text-[#FF851B] transition-colors">info@ihrc.in</a></p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-xs tracking-widest uppercase mb-3">🇨🇭 Switzerland
+                        Headquarters</h4>
+                    <p class="text-slate-300 leading-relaxed">31 Rue Vollandes, 1207 Genèva,<br>Switzerland<br><a
+                            href="tel:+41779664839" class="hover:text-[#FF851B] transition-colors">+41 77 966
+                            4839</a><br><a href="mailto:info@ihrc-geneve.org"
+                            class="hover:text-[#FF851B] transition-colors">info@ihrc-geneve.org</a></p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-xs tracking-widest uppercase mb-3">🇮🇳 India Headquarters</h4>
+                    <p class="text-slate-300 leading-relaxed">54 Raj Chambers, Alibhai Premji Marg,<br>Grant Road,
+                        Mumbai - 400007<br><a href="tel:+917208802565"
+                            class="hover:text-[#FF851B] transition-colors">+91 72088 02565</a><br><a
+                            href="mailto:ihrc777@gmail.com"
+                            class="hover:text-[#FF851B] transition-colors">ihrc777@gmail.com</a></p>
+                </div>
+            </div>
         </div>
-        <div>
-            <h4 class="font-bold text-white text-xs tracking-widest uppercase mb-3">🇮🇳 India Headquarters</h4>
-            <p class="text-slate-300 leading-relaxed">54 Raj Chambers, Alibhai Premji Marg,<br>Grant Road, Mumbai - 400007<br><a href="tel:+917208802565" class="hover:text-[#FF851B] transition-colors">+91 72088 02565</a><br><a href="mailto:ihrc777@gmail.com" class="hover:text-[#FF851B] transition-colors">ihrc777@gmail.com</a></p>
-        </div>
-    </div>
-</div>
-</footer>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script>
-    const SUPABASE_PROJECT_URL = "https://ehnxtthhtjyijerayfqn.supabase.co";
-    const CREATE_ORDER_URL = `${SUPABASE_PROJECT_URL}/functions/v1/create-order`;
+    </footer>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        const SUPABASE_PROJECT_URL = "https://ehnxtthhtjyijerayfqn.supabase.co";
+        const CREATE_ORDER_URL = `${SUPABASE_PROJECT_URL}/functions/v1/create-order`;
 
-    const form = document.getElementById('registrationForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const btnText = document.getElementById('btnText');
-    const btnSpinner = document.getElementById('btnSpinner');
+        const form = document.getElementById('registrationForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnSpinner = document.getElementById('btnSpinner');
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
 
-        // 1. Gather form data
-        const formData = {
-            name: document.getElementById('fullName').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            gender: document.getElementById('gender').value,
-            occupation: document.getElementById('occupation').value,
-        };
-
-        try {
-            // Disable button and show spinner
-            submitBtn.disabled = true;
-            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
-            btnText.innerText = "Processing...";
-            btnSpinner.classList.remove('hidden');
-
-            // 2. Call Edge Function to create order
-            const response = await fetch(CREATE_ORDER_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            });
-
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.error || 'Failed to create order');
-            }
-
-            const data = await response.json();
-
-            // 3. Initialize Razorpay Checkout
-            const options = {
-                key: data.key_id, // Sent from backend
-                amount: data.amount,
-                currency: "INR",
-                name: "IHRC Maharashtra (Education Department)",
-                description: "Workshop Registration: AI & ChatGPT",
-                order_id: data.order_id,
-                handler: function (response) {
-                    // Payment was successful. Webhook will verify. 
-                    window.location.href = "success.html"; 
-                },
-                prefill: {
-                    name: formData.name,
-                    email: formData.email,
-                    contact: formData.phone
-                },
-                theme: {
-                    color: "#FF851B"
-                }
+            // 1. Gather form data
+            const formData = {
+                name: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                gender: document.getElementById('gender').value,
+                occupation: document.getElementById('occupation').value,
             };
 
-            const rzp1 = new window.Razorpay(options);
-            
-            rzp1.on('payment.failed', function (response){
-                window.location.href = "failure.html";
-            });
+            try {
+                // Disable button and show spinner
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+                btnText.innerText = "Processing...";
+                btnSpinner.classList.remove('hidden');
 
-            rzp1.open();
+                // 2. Call Edge Function to create order
+                const response = await fetch(CREATE_ORDER_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
 
-        } catch (error) {
-            console.error("Error initiating payment:", error);
-            alert("Error initiating payment. Please try again later. Make sure your backend URL is set correctly.");
-        } finally {
-            // Restore button
-            submitBtn.disabled = false;
-            submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-            btnText.innerText = "Pay Now ₹99";
-            btnSpinner.classList.add('hidden');
-        }
-    });
-</script>
-</body></html>
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Failed to create order');
+                }
+
+                const data = await response.json();
+
+                // 3. Initialize Razorpay Checkout
+                const options = {
+                    key: data.key_id, // Sent from backend
+                    amount: data.amount,
+                    currency: "INR",
+                    name: "IHRC Maharashtra (Education Department)",
+                    description: "Workshop Registration: AI & ChatGPT",
+                    order_id: data.order_id,
+                    handler: function (response) {
+                        // Payment was successful. Webhook will verify. 
+                        window.location.href = "success.html";
+                    },
+                    prefill: {
+                        name: formData.name,
+                        email: formData.email,
+                        contact: formData.phone
+                    },
+                    theme: {
+                        color: "#FF851B"
+                    }
+                };
+
+                const rzp1 = new window.Razorpay(options);
+
+                rzp1.on('payment.failed', function (response) {
+                    window.location.href = "failure.html";
+                });
+
+                rzp1.open();
+
+            } catch (error) {
+                console.error("Error initiating payment:", error);
+                alert("Error initiating payment. Please try again later. Make sure your backend URL is set correctly.");
+            } finally {
+                // Restore button
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                btnText.innerText = "Pay Now ₹99";
+                btnSpinner.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
