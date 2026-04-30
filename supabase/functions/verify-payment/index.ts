@@ -35,10 +35,12 @@ serve(async (req) => {
 
     const payload = JSON.parse(bodyText)
     const payment = payload.payload.payment.entity
-    const order = payload.payload.order.entity
 
-    // The notes object contains the user data we passed in create-order
-    const { name, email, phone, gender, occupation } = order.notes
+    // In 'payment.captured' event, the order object might not be included.
+    // However, the notes are also attached to the payment object itself.
+    const notes = payment.notes || {};
+    const { name, email, phone, gender, occupation } = notes;
+    const order_id = payment.order_id;
 
     // 1. Save to Supabase DB
     const supabaseUrl = "https://ehnxtthhtjyijerayfqn.supabase.co"
@@ -56,7 +58,7 @@ serve(async (req) => {
           occupation,
           workshop: 'AI & ChatGPT',
           razorpay_payment_id: payment.id,
-          razorpay_order_id: order.id,
+          razorpay_order_id: order_id,
           amount: payment.amount,
           payment_status: payment.status,
         }
@@ -79,7 +81,7 @@ serve(async (req) => {
             phone,
             gender,
             occupation,
-            order_id: order.id,
+            order_id: order_id,
             payment_status: payment.status
           })
         })
@@ -110,7 +112,7 @@ serve(async (req) => {
                 <p>Thank you for registering for the <strong>AI &amp; ChatGPT Workshop</strong>.</p>
                 <p>Your payment was successful and your seat is confirmed.</p>
                 <div style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; margin: 20px 0;">
-                  <p style="margin: 5px 0;"><strong>Order ID:</strong> ${order.id}</p>
+                  <p style="margin: 5px 0;"><strong>Order ID:</strong> ${order_id}</p>
                   <p style="margin: 5px 0;"><strong>Payment ID:</strong> ${payment.id}</p>
                 </div>
                 <p>We look forward to seeing you!</p>
