@@ -153,11 +153,49 @@
                 <img src="dip_logo.jpeg" alt="DIP Logo" class="h-10 w-auto" />
             </div>
             <!-- Mobile Menu Toggle -->
-            <button class="md:hidden text-primary-container p-2">
-                <span class="material-symbols-outlined">menu</span>
+            <button id="mobile-menu-btn" class="md:hidden text-primary-container p-2" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMobileMenu()">
+                <span id="menu-icon" class="material-symbols-outlined">menu</span>
             </button>
         </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col bg-white border-t border-slate-200 shadow-lg px-6 py-4 gap-2" role="navigation">
+            <a class="text-[#001F3F] font-['Inter'] text-sm font-semibold tracking-wide uppercase py-3 border-b border-slate-100 hover:text-[#FF851B] transition-colors" href="workshops.html" onclick="closeMobileMenu()">Workshops</a>
+            <a class="text-[#001F3F] font-['Inter'] text-sm font-semibold tracking-wide uppercase py-3 border-b border-slate-100 hover:text-[#FF851B] transition-colors" href="impact.html" onclick="closeMobileMenu()">Impact</a>
+            <a class="text-[#FF851B] font-['Inter'] text-sm font-semibold tracking-wide uppercase py-3 border-b border-slate-100" href="about.html" onclick="closeMobileMenu()">About</a>
+            <div class="flex flex-col gap-3 pt-3">
+                <button class="font-['Inter'] text-sm font-semibold tracking-wide uppercase text-[#001F3F] border border-slate-300 rounded py-2.5 px-4 hover:bg-slate-50 transition-colors text-left">Contact Us</button>
+                <a href="register.html" class="font-['Inter'] text-sm font-semibold tracking-wide uppercase bg-[#FF851B] text-white py-2.5 px-4 rounded text-center hover:bg-[#e67615] transition-colors" onclick="closeMobileMenu()">Enroll Now</a>
+            </div>
+        </div>
     </header>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const btn = document.getElementById('mobile-menu-btn');
+            const isOpen = !menu.classList.contains('hidden');
+            if (isOpen) {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+                icon.textContent = 'menu';
+                btn.setAttribute('aria-expanded', 'false');
+            } else {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+                icon.textContent = 'close';
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        }
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const btn = document.getElementById('mobile-menu-btn');
+            menu.classList.add('hidden');
+            menu.classList.remove('flex');
+            icon.textContent = 'menu';
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    </script>
     <!-- Main Canvas -->
     <main class="w-full">
         <!-- Hero -->
@@ -182,6 +220,7 @@
                         style="font-variation-settings: 'FILL' 1;">flag</span>
                     <h2 class="font-h2 text-h2 text-white">Our Mission</h2>
                     <p class="font-body-lg text-body-lg text-primary-fixed">To empower every individual in Maharashtra
+                        and across India
                         with practical skills and knowledge while channeling resources back into communities that need
                         it most. We believe education and social justice are two sides of the same coin.</p>
                 </div>
@@ -192,7 +231,7 @@
                         style="font-variation-settings: 'FILL' 1;">visibility</span>
                     <h2 class="font-h2 text-h2 text-primary-container">Our Vision</h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant">India where every citizen has
-                        access to quality education, mental wellness, and economic opportunity — regardless of
+                        access to quality education, mental wellness, and economic opportunity regardless of
                         background, and where learning directly powers community welfare.</p>
                 </div>
             </div>
