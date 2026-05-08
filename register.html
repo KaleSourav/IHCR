@@ -397,6 +397,7 @@
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
         const SUPABASE_PROJECT_URL = "https://ehnxtthhtjyijerayfqn.supabase.co";
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVobnh0dGhodGp5aWplcmF5ZnFuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU0OTY2MjMsImV4cCI6MjA2MTA3MjYyM30.WJjNgkKZPEH7OU-6fAlWU-iL8lE6Qc4T3C1MH3-0VMU";
         const CREATE_ORDER_URL = `${SUPABASE_PROJECT_URL}/functions/v1/create-order`;
 
         const form = document.getElementById('registrationForm');
@@ -428,6 +429,8 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
                     },
                     body: JSON.stringify(formData)
                 });
